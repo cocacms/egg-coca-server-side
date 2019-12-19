@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = app => {
   /**
@@ -8,7 +8,7 @@ module.exports = app => {
   const { validate, permission, curd, user } = middlewares;
   const { User, Role } = model;
 
-  const prefix = "/backend";
+  const prefix = '/backend';
 
   const adminWithoutAuth = router.namespace(prefix);
 
@@ -16,10 +16,10 @@ module.exports = app => {
    * 登录
    */
   adminWithoutAuth.post(
-    "/login",
+    '/login',
     validate([
-      field("account", "账号").required(),
-      field("password", "密码").required()
+      field('account', '账号').required(),
+      field('password', '密码').required(),
     ]),
     controller.user.login
   );
@@ -27,12 +27,12 @@ module.exports = app => {
   /**
    * 登出
    */
-  adminWithoutAuth.post("/logout", controller.user.logout);
+  adminWithoutAuth.post('/logout', controller.user.logout);
 
   /**
    * 权限表
    */
-  adminWithoutAuth.get("/permission", async (ctx, next) => {
+  adminWithoutAuth.get('/permission', async (ctx, next) => {
     ctx.body = ctx.app.config.permission;
     await next();
   });
@@ -42,7 +42,7 @@ module.exports = app => {
   /**
    * 上传
    */
-  admin.post("/upload", async (ctx, next) => {
+  admin.post('/upload', async (ctx, next) => {
     ctx.body = await ctx.service.upload.upload();
     await next();
   });
@@ -51,10 +51,10 @@ module.exports = app => {
    * 修改密码
    */
   admin.post(
-    "/reset",
+    '/reset',
     validate([
-      field("newpassword", "新密码").required(),
-      field("password", "旧密码").required()
+      field('newpassword', '新密码').required(),
+      field('password', '旧密码').required(),
     ]),
     controller.user.reset
   );
@@ -62,16 +62,16 @@ module.exports = app => {
   /**
    * 个人信息
    */
-  admin.get("/info", controller.user.info);
+  admin.get('/info', controller.user.info);
 
   /**
    * 用户 Restful
    */
   admin.resources(
-    "user",
-    "/user",
-    validate([field("password", "密码").required()], { method: ["POST"] }),
-    permission("user"),
+    'user',
+    '/user',
+    validate([ field('password', '密码').required() ], { method: [ 'POST' ] }),
+    permission('user'),
     curd(User)
   );
 
@@ -79,10 +79,10 @@ module.exports = app => {
    * 角色 Restful
    */
   admin.resources(
-    "role",
-    "/role",
-    validate([field("name", "名称").required()], { method: ["POST", "PUT"] }),
-    permission("role"),
+    'role',
+    '/role',
+    validate([ field('name', '名称').required() ], { method: [ 'POST', 'PUT' ] }),
+    permission('role'),
     curd(Role)
   );
 };
