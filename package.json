@@ -1,0 +1,55 @@
+{
+  "name": "coca-server",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "egg": "^2.15.1",
+    "egg-coca-helper": "^1.0.2",
+    "egg-coca-restful": "^1.0.4",
+    "egg-coca-sequelize": "^5.2.1",
+    "egg-coca-upload": "^1.0.0",
+    "egg-coca-user-permission": "^1.0.2",
+    "egg-cors": "^2.2.3",
+    "egg-router-plus": "^1.3.1",
+    "egg-scripts": "^2.11.0",
+    "mysql2": "^2.0.2"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-coca-cli": "^1.1.8",
+    "egg-mock": "^3.21.0",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-coca-server",
+    "stop": "egg-scripts stop --title=egg-server-coca-server",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "10"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "rojerchen",
+  "license": "MIT"
+}
