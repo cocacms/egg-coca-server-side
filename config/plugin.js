@@ -35,7 +35,24 @@ exports.cocaUpload = {
 exports.cocaUserPermission = {
   enable: true,
   package: 'egg-coca-user-permission',
-  // path: path.join(__dirname, "../lib/egg-coca-user-permission")
+};
+
+// 微信小程序-sdk与用户
+exports.cocaWxMember = {
+  enable: true,
+  package: 'egg-coca-wx-member',
+};
+
+// 微信小程序-sdk与用户
+exports.cocaTenpay = {
+  enable: true,
+  package: 'egg-coca-tenpay',
+};
+
+// LBS
+exports.cocaLbs = {
+  enable: true,
+  package: 'egg-coca-lbs',
 };
 
 // 其他工具包

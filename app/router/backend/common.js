@@ -70,7 +70,9 @@ module.exports = app => {
   admin.resources(
     'user',
     '/user',
-    validate([ field('password', '密码').required() ], { method: [ 'POST' ] }),
+    validate([ field('password', '密码').required() ], {
+      method: [ 'POST', 'PUT' ],
+    }),
     permission('user'),
     curd(User)
   );
@@ -78,10 +80,13 @@ module.exports = app => {
   /**
    * 角色 Restful
    */
+  admin.get('/role', curd(Role, 'index')); // 获取列表不用权限
   admin.resources(
     'role',
     '/role',
-    validate([ field('name', '名称').required() ], { method: [ 'POST', 'PUT' ] }),
+    validate([ field('name', '名称').required() ], {
+      method: [ 'POST', 'PUT' ],
+    }),
     permission('role'),
     curd(Role)
   );

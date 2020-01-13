@@ -18,7 +18,7 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1576733286424_2068';
 
   // add your middleware config here
-  config.middleware = [ 'error' ]; // 错误处理
+  config.middleware = [ 'unique', 'error' ]; // 错误处理
 
   config.cors = {
     origin: '*',
@@ -30,7 +30,7 @@ module.exports = appInfo => {
    */
   config.security = {
     csrf: {
-      ignore: [ '/backend' ],
+      ignore: [ '/backend', '/mini' ],
     },
   };
 
@@ -45,6 +45,15 @@ module.exports = appInfo => {
       // 定时清理缓存
       cron: '0 30 4 * * *',
     },
+  };
+
+  /**
+   * 上次文件限制
+   */
+  config.bodyParser = {
+    formLimit: '50mb',
+    jsonLimit: '10mb',
+    textLimit: '10mb',
   };
 
   /**
@@ -87,7 +96,9 @@ module.exports = appInfo => {
         private: [
           readFileSync(path.join(__dirname, './rsa/rsa_private_key.pem')),
         ],
-        public: [ readFileSync(path.join(__dirname, './rsa/rsa_public_key.pem')) ],
+        public: [
+          readFileSync(path.join(__dirname, './rsa/rsa_public_key.pem')),
+        ],
       },
     },
 
@@ -112,6 +123,35 @@ module.exports = appInfo => {
         Cdn: '', // cdn域名 如：//cdn.xxxx.cn/
         Host: '//upload-z2.qiniup.com', // 上传域，与bucket所在地区有关
       },
+    },
+
+    /**
+     * LBS
+     */
+
+    lbs: {
+      table_id: '',
+      key: '',
+    },
+
+    /**
+     * 微信小程序
+     */
+    wxMember: {
+      appId: '',
+      appSecret: '',
+    },
+
+    /**
+     * 微信支付
+     */
+    wxTenpay: {
+      appid: '',
+      mchid: '',
+      partnerKey: '',
+      pfx: '',
+      notify_url: '',
+      spbill_create_ip: '',
     },
   };
 
