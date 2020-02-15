@@ -14,24 +14,11 @@ class _Controller extends Controller {
   }
 
   async update_tel() {
-    const { ctx, app } = this;
-    const result = app.weapp.crypto.decryptData({
-      sessionKey: ctx.wx_member.session_key,
-      encryptedData: ctx.request.body.encryptedData,
-      iv: ctx.request.body.iv,
-    });
-
-    if (!result.purePhoneNumber) {
-      ctx.throw('手机号码无效');
-    }
-
-    try {
-      ctx.body = await ctx.wx_member.update({
-        tel: result.purePhoneNumber,
-      });
-    } catch (e) {
-      ctx.throw('号码已被别人绑定');
-    }
+    const { ctx, service } = this;
+    ctx.body = await service.wxMember.bind_tel(
+      ctx.request.body.encryptedData,
+      ctx.request.body.iv
+    );
   }
 }
 
