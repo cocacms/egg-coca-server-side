@@ -143,7 +143,7 @@ module.exports = appInfo => {
     /**
      * 微信小程序
      */
-    wxMember: {
+    weapp: {
       appId: '',
       appSecret: '',
     },

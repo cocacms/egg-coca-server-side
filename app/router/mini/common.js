@@ -20,18 +20,7 @@ module.exports = app => {
    * 修改个人信息
    */
 
-  admin.put(
-    '/info',
-    validate([
-      field('nick_name', '昵称').required(),
-      field('avatar_url', '头像').required(),
-      field('gender', '性别').required(),
-      field('country', '国家').required(),
-      field('province', '省份').required(),
-      field('city', '城市').required(),
-    ]),
-    controller.mini.update
-  );
+  admin.put('/info', controller.mini.update);
 
   /**
    * 绑定手机
