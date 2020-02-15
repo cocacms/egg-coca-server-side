@@ -1,4 +1,8 @@
-# 2.0.0-beta.1 (2020-02-15)
+# [2.0.0-beta.2](https://github.com/rojer95/egg-coca-server-side/compare/2.0.0-beta.1...2.0.0-beta.2) (2020-02-15)
+
+
+
+# [2.0.0-beta.1](https://github.com/rojer95/egg-coca-server-side/compare/fddd24f6f3eb3b08c9df51ea277fae3a3c94abb2...2.0.0-beta.1) (2020-02-15)
 
 
 ### Features
