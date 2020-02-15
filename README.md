@@ -1,44 +1,49 @@
 # egg-coca-server-side
 
-Coca rapid development framework For Amoy Freesailing Company Base On EggJs
+Coca 快速开发框架 Coca rapid development framework For Amoy Freesailing Company Base On EggJs
 
-## front-end
+## 依赖
 
-[egg-coca-admin-front-end](https://github.com/rojer95/egg-coca-admin-front-end)
+- 前端框架 [egg-coca-admin-front-end](https://github.com/rojer95/egg-coca-admin-front-end)
+- 数据库操作库 [egg-coca-sequelize](https://github.com/rojer95/egg-coca-sequelize)
+- LBS 定位 快速开发包 [egg-coca-lbs](https://github.com/rojer95/egg-coca-lbs)
+- RESTFUL 快速开发包 [egg-coca-restful](https://github.com/rojer95/egg-coca-restful)
+- 微信支付 快速开发包 [egg-coca-tenpay](https://github.com/rojer95/egg-coca-tenpay)
+- 文件上传 快速开发包[本地，七牛云][egg-coca-upload](https://github.com/rojer95/egg-coca-upload)
+- 后台用户权限角色 快速开发包 [egg-coca-user-permission](https://github.com/rojer95/egg-coca-user-permission)
+- 小程序用户&SDK 快速开发包 [egg-coca-wx-member](https://github.com/rojer95/egg-coca-wx-member)
+- CLI 工具包 [egg-coca-cli](https://github.com/rojer95/egg-coca-cli)
+- 其他工具包 [egg-coca-helper](https://github.com/rojer95/egg-coca-helper)
 
-## QuickStart
+## 快速开始
 
 <!-- add docs here for user -->
 
 ```bash
 $ git clone https://github.com/rojer95/egg-coca-server-side.git
 $ cd ./egg-coca-server-side
-$ npm install
-$ npx coca rsa:build
-$ npx coca db:migrate
+$ yarn install
+$ yarn coca rsa:build
+$ yarn coca db:migrate
 $ npm run debug
 ```
 
-### Coca Cli
+## Coca Cli
 
 ```bash
-$ npx coca rsa:build # 生成rsa秘钥
-$ npx coca db:migrate # 迁移数据库表格结构
-$ npx coca db:init # 生成sequelize配置目录
-$ npx coca db:add # 创建数据库迁移文件
+$ yarn coca rsa:build # 生成rsa秘钥
+$ yarn coca db:migrate # 迁移数据库表格结构
+$ yarn coca db:init # 生成sequelize配置目录
+$ yarn coca db:add # 创建数据库迁移文件
 ```
 
-### Deploy
+## 部署
 
 ```bash
 $ npm start
 $ npm stop
 ```
 
-### npm scripts
+## 更新日志
 
-- Use `npm run lint` to check code style.
-- Use `npm test` to run unit test.
-- Use `npm run autod` to auto detect dependencies upgrade, see [autod](https://www.npmjs.com/package/autod) for more detail.
-
-[egg]: https://eggjs.org
+本项目遵从 [Angular Style Commit Message Conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)，更新日志由 `conventional-changelog` 自动生成。完整日志请点击 [CHANGELOG.md](./CHANGELOG.md)。
