@@ -97,4 +97,14 @@ module.exports = app => {
     permission('role', [ 'index' ]),
     curd(Role)
   );
+
+  /**
+   * 系统配置 Restful
+   */
+  admin.resources(
+    'setting',
+    '/setting',
+    permission('setting'),
+    controller.setting
+  );
 };
