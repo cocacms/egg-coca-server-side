@@ -37,6 +37,14 @@ module.exports = app => {
     await next();
   });
 
+  /**
+   * 系统配置
+   */
+  adminWithoutAuth.get('/setting', async (ctx, next) => {
+    ctx.body = ctx.app.config.setting;
+    await next();
+  });
+
   const admin = router.namespace(prefix, user());
 
   /**

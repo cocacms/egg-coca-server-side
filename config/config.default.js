@@ -1,6 +1,7 @@
 'use strict';
 const path = require('path');
 const permission = require('./permission');
+const setting = require('./setting');
 
 const { readFileSync } = require('fs');
 
@@ -60,6 +61,11 @@ module.exports = appInfo => {
    * 权限
    */
   config.permission = permission;
+
+  /**
+   * 系统配置
+   */
+  config.setting = setting;
 
   const localEnvConfig = {
     /**
