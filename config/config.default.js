@@ -19,7 +19,7 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1576733286424_2068';
 
   // add your middleware config here
-  config.middleware = [ 'unique', 'error' ]; // 错误处理
+  config.middleware = [ 'error' ]; // 错误处理
 
   config.cors = {
     origin: '*',

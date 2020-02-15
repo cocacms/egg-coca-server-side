@@ -62,5 +62,6 @@ exports.cocaLbs = {
 // 其他工具包
 exports.cocaHelper = {
   enable: true,
+  // path: path.join(__dirname, '../lib/egg-coca-helper'),
   package: 'egg-coca-helper',
 };

@@ -40,7 +40,7 @@ module.exports = app => {
   /**
    * 系统配置
    */
-  adminWithoutAuth.get('/setting', async (ctx, next) => {
+  adminWithoutAuth.get('/setting-dataset', async (ctx, next) => {
     ctx.body = ctx.app.config.setting;
     await next();
   });
@@ -88,14 +88,13 @@ module.exports = app => {
   /**
    * 角色 Restful
    */
-  admin.get('/role', curd(Role, 'index')); // 获取列表不用权限
   admin.resources(
     'role',
     '/role',
     validate([ field('name', '名称').required() ], {
       method: [ 'POST', 'PUT' ],
     }),
-    permission('role'),
+    permission('role', [ 'index' ]),
     curd(Role)
   );
 };
