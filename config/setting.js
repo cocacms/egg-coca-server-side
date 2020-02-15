@@ -48,23 +48,6 @@ module.exports = [
     required: true,
   },
 
-  //   {
-  //     key: 'select',
-  //     type: 'select',
-  //     label: '选择栏',
-  //     options: [
-  //       {
-  //         label: 'A',
-  //         value: 'a',
-  //       },
-  //       {
-  //         label: 'B',
-  //         value: 'b',
-  //       },
-  //     ],
-  //     required: true,
-  //   },
-
   {
     key: 'number',
     type: 'number',
