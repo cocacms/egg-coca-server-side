@@ -1,4 +1,6 @@
 'use strict';
+// const path = require('path');
+
 exports.routerPlus = {
   enable: true,
   package: 'egg-router-plus',
@@ -23,6 +25,7 @@ exports.sequelize = {
 exports.cocaRestful = {
   enable: true,
   package: 'egg-coca-restful',
+  // path: path.join(__dirname, '../lib/egg-coca-restful'),
 };
 
 // 上传
@@ -35,6 +38,7 @@ exports.cocaUpload = {
 exports.cocaUserPermission = {
   enable: true,
   package: 'egg-coca-user-permission',
+  // path: path.join(__dirname, '../lib/egg-coca-user-permission'),
 };
 
 // 微信小程序-sdk与用户

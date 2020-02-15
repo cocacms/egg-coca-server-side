@@ -8,7 +8,6 @@ module.exports = app => {
   const { validate, permission, curd, user } = middlewares;
   const { User, Role } = model;
 
-  router.get('/', controller.setting.test);
   const prefix = '/backend';
 
   const adminWithoutAuth = router.namespace(prefix);
