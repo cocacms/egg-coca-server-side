@@ -63,6 +63,14 @@ module.exports = appInfo => {
   config.permission = permission;
 
   /**
+   * 国际化（I18n）
+   */
+
+  config.i18n = {
+    defaultLocale: 'zh-CN',
+  };
+
+  /**
    * 系统配置
    */
   config.setting = setting;

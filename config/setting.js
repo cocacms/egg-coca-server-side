@@ -59,7 +59,7 @@ module.exports = [
     key: 'img',
     type: 'img',
     label: '图片',
-    required: true,
+    // required: true,
     props: {
       max: 1,
     },

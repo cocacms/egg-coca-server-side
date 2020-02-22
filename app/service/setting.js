@@ -13,7 +13,11 @@ class _Service extends Service {
     };
 
     for (const config of configs) {
-      data[config.key] = config.value;
+      try {
+        data[config.key] = JSON.parse(config.value);
+      } catch (error) {
+        data[config.key] = null;
+      }
     }
 
     return data;
@@ -36,13 +40,13 @@ class _Service extends Service {
             transaction,
           });
           if (item) {
-            item.value = value;
+            item.value = JSON.stringify(value);
             await item.save({ transaction });
           } else {
             await app.model.Setting.create(
               {
                 key,
-                value,
+                value: JSON.stringify(value),
               },
               {
                 transaction,

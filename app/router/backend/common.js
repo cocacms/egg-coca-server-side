@@ -78,9 +78,16 @@ module.exports = app => {
   admin.resources(
     'user',
     '/user',
-    validate([ field('password', '密码').required() ], {
-      method: [ 'POST', 'PUT' ],
-    }),
+    validate(
+      [
+        field('password', '密码').requiredIf(async (value, result, ctx) => {
+          return ctx.method === 'POST';
+        }),
+      ],
+      {
+        method: [ 'POST', 'PUT' ],
+      }
+    ),
     permission('user'),
     curd(User)
   );
