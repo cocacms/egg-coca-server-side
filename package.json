@@ -9,7 +9,7 @@
   "dependencies": {
     "egg": "^2.15.1",
     "egg-coca-helper": "^2.0.0-beta.3.1",
-    "egg-coca-lbs": "^1.0.0",
+    "egg-coca-lbs": "^1.0.1",
     "egg-coca-restful": "^2.0.0-beta.1",
     "egg-coca-sequelize": "^5.2.2",
     "egg-coca-tenpay": "^1.0.0",
