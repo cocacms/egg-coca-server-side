@@ -2,20 +2,20 @@
 
 module.exports = [
   {
-    key: 'string',
+    name: 'string',
     type: 'string',
     label: '短文本',
     required: true,
   },
   {
-    key: 'text',
+    name: 'text',
     type: 'text',
     label: '长文本',
     required: true,
   },
 
   {
-    key: 'radio',
+    name: 'radio',
     type: 'radio',
     label: '单选',
     options: [
@@ -32,7 +32,7 @@ module.exports = [
   },
 
   {
-    key: 'checkbox',
+    name: 'checkbox',
     type: 'checkbox',
     label: '多选',
     options: [
@@ -49,14 +49,14 @@ module.exports = [
   },
 
   {
-    key: 'number',
+    name: 'number',
     type: 'number',
     label: '数字',
     required: true,
   },
 
   {
-    key: 'img',
+    name: 'img',
     type: 'img',
     label: '图片',
     // required: true,
@@ -66,8 +66,15 @@ module.exports = [
   },
 
   {
-    key: 'rich',
+    name: 'rich',
     type: 'rich',
+    label: '富文本',
+    required: true,
+  },
+
+  {
+    name: 'markdown',
+    type: 'markdown',
     label: '富文本',
     required: true,
   },
