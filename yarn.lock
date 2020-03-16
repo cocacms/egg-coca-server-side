@@ -3270,17 +3270,17 @@ egg-coca-helper@^2.0.0-beta.3.1:
     datalize-multi-language "^1.0.8"
     uuid "^3.3.3"
 
-egg-coca-lbs@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npm.taobao.org/egg-coca-lbs/download/egg-coca-lbs-1.0.0.tgz#c21ac7eb6e1ceb50933b0918c6d902ab54d18e66"
-  integrity sha1-whrH624c61CTOwkYxtkCq1TRjmY=
+egg-coca-lbs@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/egg-coca-lbs/download/egg-coca-lbs-1.0.1.tgz#74e005cd9bec8f7ab2d6d8e867f0d7092a9fd0aa"
+  integrity sha1-dOAFzZvsj3qy1tjoZ/DXCSqf0Ko=
 
 egg-coca-restful@^2.0.0-beta.1:
   version "2.0.0-beta.1"
   resolved "https://registry.npm.taobao.org/egg-coca-restful/download/egg-coca-restful-2.0.0-beta.1.tgz#ae516bf912d985b8462d2e60a6d7a47ffb646711"
   integrity sha1-rlFr+RLZhbhGLS5gptekf/tkZxE=
 
-egg-coca-sequelize@^5.2.1:
+egg-coca-sequelize@^5.2.2:
   version "5.2.2"
   resolved "https://registry.npm.taobao.org/egg-coca-sequelize/download/egg-coca-sequelize-5.2.2.tgz#68113b24fd63ed16b6fd45c301f9eccbad270760"
   integrity sha1-aBE7JP1j7Ra2/UXDAfnsy60nB2A=
@@ -3303,10 +3303,10 @@ egg-coca-upload@^1.0.0:
   dependencies:
     qiniu "^7.2.2"
 
-egg-coca-user-permission@^2.0.0-beta.2:
-  version "2.0.0-beta.2"
-  resolved "https://registry.npm.taobao.org/egg-coca-user-permission/download/egg-coca-user-permission-2.0.0-beta.2.tgz#eb84ad4a7f7c74f9e1095e344b5fc4f2e157698d"
-  integrity sha1-64StSn98dPnhCV40S1/E8uFXaY0=
+egg-coca-user-permission@^2.0.0-beta.3:
+  version "2.0.0-beta.3.1"
+  resolved "https://registry.npm.taobao.org/egg-coca-user-permission/download/egg-coca-user-permission-2.0.0-beta.3.1.tgz#2c164e4ce3059583fe7a9d94c4835d4ff6814173"
+  integrity sha1-LBZOTOMFlYP+ep2UxINdT/aBQXM=
   dependencies:
     jose "^1.12.0"
 
@@ -5478,9 +5478,9 @@ jest-changed-files@^24.7.0:
     throat "^4.0.0"
 
 jose@^1.12.0:
-  version "1.23.0"
-  resolved "https://registry.npm.taobao.org/jose/download/jose-1.23.0.tgz#158f87880cbcf500a032c88a05045ddd78c79615"
-  integrity sha1-FY+HiAy89QCgMsiKBQRd3XjHlhU=
+  version "1.25.0"
+  resolved "https://registry.npm.taobao.org/jose/download/jose-1.25.0.tgz#59e1185134657d124da12d77c01f52a045cc0b7f"
+  integrity sha1-WeEYUTRlfRJNoS13wB9SoEXMC38=
   dependencies:
     "@panva/asn1.js" "^1.0.0"
 
