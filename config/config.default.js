@@ -75,6 +75,26 @@ module.exports = appInfo => {
    */
   config.setting = setting;
 
+  const redis = {
+    host: '127.0.0.1',
+    port: '6379',
+    password: '',
+    db: 0,
+  };
+
+  config.redis = {
+    client: redis,
+  };
+
+  config.bull = {
+    clients: {
+    },
+    default: {
+      redis,
+    },
+    prefix: 'coca_queue',
+  };
+
   const localEnvConfig = {
     /**
      * 数据库配置

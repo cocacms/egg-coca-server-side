@@ -1,5 +1,5 @@
-'use strict';
-const Service = require('egg').Service;
+"use strict";
+const Service = require("egg").Service;
 
 class _Service extends Service {
   /**
@@ -7,20 +7,16 @@ class _Service extends Service {
    */
   async show() {
     const { app } = this;
-    const configs = await app.model.Setting.findAll();
-    const data = {
-      id: 1,
-    };
-
-    for (const config of configs) {
-      try {
-        data[config.key] = JSON.parse(config.value);
-      } catch (error) {
-        data[config.key] = null;
-      }
+    let config;
+    try {
+      const config_str = await app.redis.get("system.setting");
+      config = JSON.parse(config_str);
+      if (!config) throw new Error("empty");
+    } catch (error) {
+      config = {};
     }
-
-    return data;
+    config.id = 1;
+    return config;
   }
 
   /**
@@ -29,35 +25,7 @@ class _Service extends Service {
    */
   async update(data) {
     const { app } = this;
-    await app.model.transaction(async transaction => {
-      for (const key in data) {
-        if (data.hasOwnProperty(key)) {
-          const value = data[key];
-          const item = await app.model.Setting.findOne({
-            where: {
-              key,
-            },
-            transaction,
-          });
-          if (item) {
-            item.value = JSON.stringify(value);
-            await item.save({ transaction });
-          } else {
-            await app.model.Setting.create(
-              {
-                key,
-                value: JSON.stringify(value),
-              },
-              {
-                transaction,
-              }
-            );
-          }
-        }
-      }
-    });
-
-    return data;
+    return await app.redis.set("system.setting", JSON.stringify(data));
   }
 }
 

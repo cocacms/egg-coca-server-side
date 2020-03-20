@@ -11,6 +11,16 @@ exports.cors = {
   package: 'egg-cors',
 };
 
+exports.queue = {
+  enable: true,
+  package: 'egg-queue-bull',
+};
+
+exports.redis = {
+  enable: true,
+  package: 'egg-redis',
+};
+
 /**
  * 以下为 coca 框架插件包
  */
