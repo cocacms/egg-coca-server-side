@@ -11,7 +11,7 @@ Coca 快速开发框架 Coca rapid development framework For Amoy Freesailing Co
 - 微信支付 快速开发包 [egg-coca-tenpay](https://github.com/rojer95/egg-coca-tenpay)
 - 文件上传 快速开发包[本地，七牛云][egg-coca-upload](https://github.com/rojer95/egg-coca-upload)
 - 后台用户权限角色 快速开发包 [egg-coca-user-permission](https://github.com/rojer95/egg-coca-user-permission)
-- 小程序用户&SDK 快速开发包 [egg-coca-wx-member](https://github.com/rojer95/egg-coca-wx-member)
+- 小程序 SDK 快速开发包 [egg-coca-weapp-sdk](https://github.com/rojer95/egg-coca-weapp-sdk)
 - CLI 工具包 [egg-coca-cli](https://github.com/rojer95/egg-coca-cli)
 - 其他工具包 [egg-coca-helper](https://github.com/rojer95/egg-coca-helper)
 
