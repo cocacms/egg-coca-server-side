@@ -1,6 +1,6 @@
 {
   "name": "coca-server",
-  "version": "2.0.0-beta.2",
+  "version": "2.0.0-beta.5",
   "description": "Coca rapid development framework For Amoy Freesailing Company Base On EggJs",
   "private": true,
   "egg": {
@@ -8,13 +8,13 @@
   },
   "dependencies": {
     "egg": "^2.15.1",
-    "egg-coca-helper": "^2.0.0-beta.3.1",
-    "egg-coca-lbs": "^1.0.1",
-    "egg-coca-restful": "^2.0.0-beta.1",
+    "egg-coca-helper": "^2.0.1",
+    "egg-coca-lbs": "^2.0.1",
+    "egg-coca-restful": "^2.0.1",
     "egg-coca-sequelize": "^5.2.2",
-    "egg-coca-tenpay": "^1.0.0",
-    "egg-coca-upload": "^1.0.0",
-    "egg-coca-user-permission": "^2.0.0-beta.3",
+    "egg-coca-tenpay": "^2.0.1",
+    "egg-coca-upload": "^2.0.1",
+    "egg-coca-user-permission": "^2.0.1",
     "egg-coca-weapp-sdk": "^2.0.1",
     "egg-cors": "^2.2.3",
     "egg-queue-bull": "^1.0.0",

@@ -2940,10 +2940,10 @@ data-uri-to-buffer@1:
   resolved "https://registry.npm.taobao.org/data-uri-to-buffer/download/data-uri-to-buffer-1.2.0.tgz#77163ea9c20d8641b4707e8f18abdf9a78f34835"
   integrity sha1-dxY+qcINhkG0cH6PGKvfmnjzSDU=
 
-datalize-multi-language@^1.0.8:
-  version "1.0.9"
-  resolved "https://registry.npm.taobao.org/datalize-multi-language/download/datalize-multi-language-1.0.9.tgz?cache=0&sync_timestamp=1582392006671&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdatalize-multi-language%2Fdownload%2Fdatalize-multi-language-1.0.9.tgz#c24b8e25d4b78a8643e60d639048d66fd2bd747d"
-  integrity sha1-wkuOJdS3ioZD5g1jkEjWb9K9dH0=
+datalize-multi-language@^1.0.9:
+  version "1.1.0"
+  resolved "https://registry.npm.taobao.org/datalize-multi-language/download/datalize-multi-language-1.1.0.tgz#e110710156954587081a22430877bd7b851d97e0"
+  integrity sha1-4RBxAVaVRYcIGiJDCHe9e4Udl+A=
   dependencies:
     lodash "^4.17.15"
 
@@ -3340,23 +3340,23 @@ egg-coca-cli@^1.1.8:
     commander "^4.0.1"
     sequelize-cli "^5.5.1"
 
-egg-coca-helper@^2.0.0-beta.3.1:
-  version "2.0.0-beta.3.1"
-  resolved "https://registry.npm.taobao.org/egg-coca-helper/download/egg-coca-helper-2.0.0-beta.3.1.tgz#5415b10319b6de44c2ba5467ed25ada107951cc7"
-  integrity sha1-VBWxAxm23kTCulRn7SWtoQeVHMc=
+egg-coca-helper@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/egg-coca-helper/download/egg-coca-helper-2.0.1.tgz?cache=0&sync_timestamp=1587128333907&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fegg-coca-helper%2Fdownload%2Fegg-coca-helper-2.0.1.tgz#c264b87af99e807ac6b140357c9c732aa52b067a"
+  integrity sha1-wmS4evmegHrGsUA1fJxzKqUrBno=
   dependencies:
-    datalize-multi-language "^1.0.8"
+    datalize-multi-language "^1.0.9"
     uuid "^3.3.3"
 
-egg-coca-lbs@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npm.taobao.org/egg-coca-lbs/download/egg-coca-lbs-1.0.1.tgz#74e005cd9bec8f7ab2d6d8e867f0d7092a9fd0aa"
-  integrity sha1-dOAFzZvsj3qy1tjoZ/DXCSqf0Ko=
+egg-coca-lbs@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/egg-coca-lbs/download/egg-coca-lbs-2.0.1.tgz?cache=0&sync_timestamp=1587128344142&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fegg-coca-lbs%2Fdownload%2Fegg-coca-lbs-2.0.1.tgz#7443d34dccd89ffb9ad82927c911348b9ea619b4"
+  integrity sha1-dEPTTczYn/ua2CknyRE0i56mGbQ=
 
-egg-coca-restful@^2.0.0-beta.1:
-  version "2.0.0-beta.1"
-  resolved "https://registry.npm.taobao.org/egg-coca-restful/download/egg-coca-restful-2.0.0-beta.1.tgz#ae516bf912d985b8462d2e60a6d7a47ffb646711"
-  integrity sha1-rlFr+RLZhbhGLS5gptekf/tkZxE=
+egg-coca-restful@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/egg-coca-restful/download/egg-coca-restful-2.0.1.tgz?cache=0&sync_timestamp=1587128358828&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fegg-coca-restful%2Fdownload%2Fegg-coca-restful-2.0.1.tgz#297871586e8ed5295ce602eae21b965e1b2e80d1"
+  integrity sha1-KXhxWG6O1Slc5gLq4huWXhsugNE=
 
 egg-coca-sequelize@^5.2.2:
   version "5.2.2"
@@ -3367,24 +3367,24 @@ egg-coca-sequelize@^5.2.2:
     mz-modules "^2.1.0"
     sequelize "^5.0.0"
 
-egg-coca-tenpay@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npm.taobao.org/egg-coca-tenpay/download/egg-coca-tenpay-1.0.0.tgz#d93e8fced957c11cbb9aeacde3dd7dce33e80321"
-  integrity sha1-2T6PztlXwRy7murN4919zjPoAyE=
+egg-coca-tenpay@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/egg-coca-tenpay/download/egg-coca-tenpay-2.0.1.tgz?cache=0&sync_timestamp=1587128373764&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fegg-coca-tenpay%2Fdownload%2Fegg-coca-tenpay-2.0.1.tgz#7ac02085db51081233355a8bf409e03cf5b6ba1b"
+  integrity sha1-esAghdtRCBIzNVqL9AngPPW2uhs=
   dependencies:
     tenpay "^2.1.18"
 
-egg-coca-upload@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npm.taobao.org/egg-coca-upload/download/egg-coca-upload-1.0.0.tgz#7ffe3539b00dacc1b9918453a4b0d1a379aac2f5"
-  integrity sha1-f/41ObANrMG5kYRTpLDRo3mqwvU=
+egg-coca-upload@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/egg-coca-upload/download/egg-coca-upload-2.0.1.tgz?cache=0&sync_timestamp=1587128384159&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fegg-coca-upload%2Fdownload%2Fegg-coca-upload-2.0.1.tgz#706865521499dc418b1ad2278bd94fbdb19bd020"
+  integrity sha1-cGhlUhSZ3EGLGtIni9lPvbGb0CA=
   dependencies:
     qiniu "^7.2.2"
 
-egg-coca-user-permission@^2.0.0-beta.3:
-  version "2.0.0-beta.3.1"
-  resolved "https://registry.npm.taobao.org/egg-coca-user-permission/download/egg-coca-user-permission-2.0.0-beta.3.1.tgz#2c164e4ce3059583fe7a9d94c4835d4ff6814173"
-  integrity sha1-LBZOTOMFlYP+ep2UxINdT/aBQXM=
+egg-coca-user-permission@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/egg-coca-user-permission/download/egg-coca-user-permission-2.0.1.tgz?cache=0&sync_timestamp=1587128399959&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fegg-coca-user-permission%2Fdownload%2Fegg-coca-user-permission-2.0.1.tgz#d9c64c688c21a36d2dee9ff94780f7f0f6b76763"
+  integrity sha1-2cZMaIwho20t7p/5R4D38Pa3Z2M=
   dependencies:
     jose "^1.12.0"
 

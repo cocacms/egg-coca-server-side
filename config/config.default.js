@@ -8,7 +8,7 @@ const { readFileSync } = require("fs");
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
-module.exports = appInfo => {
+module.exports = (appInfo) => {
   /**
    * built-in config
    * @type {Egg.EggAppConfig}
@@ -23,7 +23,7 @@ module.exports = appInfo => {
 
   config.cors = {
     origin: "*",
-    allowMethods: "GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS"
+    allowMethods: "GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS",
   };
 
   /**
@@ -31,8 +31,8 @@ module.exports = appInfo => {
    */
   config.security = {
     csrf: {
-      ignore: ["/backend", "/mini"]
-    }
+      ignore: ["/backend", "/mini"],
+    },
   };
 
   /**
@@ -44,8 +44,8 @@ module.exports = appInfo => {
     fileSize: "50mb",
     cleanSchedule: {
       // 定时清理缓存
-      cron: "0 30 4 * * *"
-    }
+      cron: "0 30 4 * * *",
+    },
   };
 
   /**
@@ -54,7 +54,7 @@ module.exports = appInfo => {
   config.bodyParser = {
     formLimit: "50mb",
     jsonLimit: "10mb",
-    textLimit: "10mb"
+    textLimit: "10mb",
   };
 
   /**
@@ -67,7 +67,7 @@ module.exports = appInfo => {
    */
 
   config.i18n = {
-    defaultLocale: "zh-CN"
+    defaultLocale: "zh-CN",
   };
 
   /**
@@ -79,17 +79,18 @@ module.exports = appInfo => {
     host: "127.0.0.1",
     port: "6379",
     password: "",
-    db: 0
+    db: 0,
+    keyPrefix: "coca:",
   };
 
   config.redis = {
-    client: redis
+    client: redis,
   };
 
   config.bull = {
     clients: {},
     redis,
-    prefix: "coca_queue"
+    prefix: "coca_queue:",
   };
 
   const localEnvConfig = {
@@ -113,8 +114,8 @@ module.exports = appInfo => {
             return field.string();
           }
           return next();
-        }
-      }
+        },
+      },
     },
 
     /**
@@ -125,10 +126,12 @@ module.exports = appInfo => {
       algorithm: "RS256",
       jwk: {
         private: [
-          readFileSync(path.join(__dirname, "./rsa/rsa_private_key.pem"))
+          readFileSync(path.join(__dirname, "./rsa/rsa_private_key.pem")),
         ],
-        public: [readFileSync(path.join(__dirname, "./rsa/rsa_public_key.pem"))]
-      }
+        public: [
+          readFileSync(path.join(__dirname, "./rsa/rsa_public_key.pem")),
+        ],
+      },
     },
 
     /**
@@ -136,7 +139,7 @@ module.exports = appInfo => {
      */
 
     logger: {
-      consoleLevel: "DEBUG"
+      consoleLevel: "DEBUG",
     },
 
     /**
@@ -150,8 +153,8 @@ module.exports = appInfo => {
         SecretKey: "",
         Bucket: "",
         Cdn: "", // cdn域名 如：//cdn.xxxx.cn/
-        Host: "//upload-z2.qiniup.com" // 上传域，与bucket所在地区有关
-      }
+        Host: "//upload-z2.qiniup.com", // 上传域，与bucket所在地区有关
+      },
     },
 
     /**
@@ -160,7 +163,7 @@ module.exports = appInfo => {
 
     lbs: {
       table_id: "",
-      key: ""
+      key: "",
     },
 
     /**
@@ -169,25 +172,25 @@ module.exports = appInfo => {
     weapp: {
       default: {
         appId: "",
-        appSecret: ""
-      }
+        appSecret: "",
+      },
     },
 
     /**
      * 微信支付
      */
-    wxTenpay: {
+    tenpay: {
       appid: "",
       mchid: "",
       partnerKey: "",
       pfx: "",
       notify_url: "",
-      spbill_create_ip: ""
-    }
+      spbill_create_ip: "",
+    },
   };
 
   return {
     ...config,
-    ...localEnvConfig
+    ...localEnvConfig,
   };
 };
