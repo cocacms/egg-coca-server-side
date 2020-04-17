@@ -1,9 +1,15 @@
-# [2.0.0-beta.2](https://github.com/rojer95/egg-coca-server-side/compare/2.0.0-beta.1...2.0.0-beta.2) (2020-02-28)
+## [2.0.1](https://github.com/rojer95/egg-coca-server-side/compare/2.0.0-beta.1...2.0.1) (2020-04-17)
 
 
 ### Bug Fixes
 
 * **egg-coca-helper:** 修复语言包，跳过验证流程，移除log ([a08c813](https://github.com/rojer95/egg-coca-server-side/commit/a08c8136ea0d353001787cc21a024dc2b5c62a19))
+
+
+### Features
+
+* **egg-coca-user-permission:** 密码重试多次进行封号 ([973037b](https://github.com/rojer95/egg-coca-server-side/commit/973037be4395066d06ce2cc3b5ef090b423cdc5e))
+* **weappsdk:** 更新小程序sdk，移除了具体的业务逻辑 ([adfdb16](https://github.com/rojer95/egg-coca-server-side/commit/adfdb16d22f7cea6960d0d7293a7190a4d3a28c5))
 
 
 
